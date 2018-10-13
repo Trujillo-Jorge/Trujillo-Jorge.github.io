@@ -1,0 +1,8 @@
+{
+    "name":"Daniel",
+    "age":41,
+    "pets":{ "animal1":"dog", "name1":"Teo",
+           "animal2":"cat", "name2":"Silvestre",
+         "animal3":"hamster", "name3":"Speedy" }
+    
+}
