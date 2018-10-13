@@ -33,6 +33,20 @@ for (i = 0; i < cars.length; i++) {
 document.getElementById("forloop").innerHTML = loop;
 </script>
   </p>
+<p>
+ <h4>Example for loop/in</h4> 
+<p id="forinloop"></p>
+
+<script>
+var txt = "";
+var person = {fname:"Daniel", lname:"Trujillo", age:41}; 
+var x;
+for (x in person) {
+    txt += person[x] + " ";
+}
+document.getElementById("forinloop").innerHTML = txt;
+</script>
+
   
     </body>
 </html>
