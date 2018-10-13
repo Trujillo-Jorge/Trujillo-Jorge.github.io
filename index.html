@@ -9,7 +9,23 @@
 
   <body>
     <h1>Topics to Reach</h1>
+   <p> 
     <h2>Week 2 JavaScript</h2>
-    
+    </p>
+  <p>
+  <h2>Week 3 Json Parse Stringify</h2>
+  <p id="demo"></p>
+
+<script>
+var myObj, myJSON, text, obj;
+//Storing data:
+myObj = { name: "Daniel", age: 41, city: "Quito" };
+myJSON = JSON.stringify(myObj);
+localStorage.setItem("testJSON", myJSON);
+//Retrieving data:
+text = localStorage.getItem("testJSON");
+obj = JSON.parse(text);
+document.getElementById("demo").innerHTML ="Name: " + obj.name;
+</script>
   </body>
   </html>
