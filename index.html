@@ -56,6 +56,41 @@ text = localStorage.getItem("testJSON");
 obj = JSON.parse(text);
 document.getElementById("demo").innerHTML ="Name: " + obj.name;
 </script>
-  </p>
+  
+
+<h3>Using XMLHTTPRequest to Consume a JSON Web Service</h3>
+<h4>Example</h4>
+<p id="demo1"></p>
+
+<script>
+
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myobj = JSON.parse(this.responseText);
+        document.getElementById("demo1").innerHTML = myobj.pets["animal1"] +"   " + myobj.pets["name1"];
+    }
+};
+xmlhttp.open("GET", "json_demo.txt", true);
+xmlhttp.send();
+
+</script>
+
+<p>File txt <a href="json_demo.txt" target="_blank">json_demo.txt</a></p>  
+  
+</p>
   </body>
   </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
