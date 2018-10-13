@@ -60,7 +60,24 @@ while (i < 5) {
 }
 document.getElementById("whileloop").innerHTML = text;
 </script>
-</p>  
+</p> 
+<p>
+  <h4>Example do/while loop</h4> 
+  <p id="dowhileloop"></p>
+
+<script>
+var text = ""
+var i = 0;
+
+do {
+    text += "<br>Number " + i;
+    i++;
+}
+while (i < 5);  
+
+document.getElementById("dowhileloop").innerHTML = text;
+</script>
+</p>
     </body>
 </html>
 
