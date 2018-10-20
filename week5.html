@@ -11,11 +11,23 @@
   <p>
   <h2>Week 5 Local Storage Storing and Retrieving Arrays, Associative Arrays, and Objects</h2>
  <ul>
-   <li><a>JSON: JavaScript Object Notation.</a></li>
-   <li><a>JSON is a syntax for storing and exchanging data.</a></li>
-   <li><a>JSON is text, written with JavaScript object notation.</a></li>
+   <li><a>sessionStorage maintains a separate storage area for each given origin that's available for the duration of the page session (as long as the browser is open, including page reloads and restores)</a></li>
+   <li><a>localStorage does the same thing, but persists even when the browser is closed and reopened.</a></li>
   </ul>
    <h3>Json Parse</h3>
+    // our array
+var movies = ["Reservoir Dogs", "Pulp Fiction", "Jackie Brown", 
+"Kill Bill", "Death Proof", "Inglourious Basterds"];
+ 
+// storing our array as a string
+localStorage.setItem("quentinTarantino", JSON.stringify(movies));
+ 
+// retrieving our data and converting it back into an array
+var retrievedData = localStorage.getItem("quentinTarantino");
+var movies2 = JSON.parse(retrievedData);
+ 
+//making sure it still is an array
+alert(movies2.length);
    <ul>
      <li><a>When receiving data from a web server, the data is always a string.</a></li>
 
