@@ -31,9 +31,16 @@ var movies2 = JSON.parse(retrievedData);
 //making sure it still is an array
 alert(movies2.length);
     </script>
-    
-    
-    
+  <h3>Storing and Retrieving Functions</h3>
+    <h4>Example</h4>
+    <script>
+  var myFunc = function (){
+  alert('Hello world!');
+};
+
+// Store it as a String
+localStorage.setItem('compressedFunc', myFunc.toString());  
+    </script>
     
   </body>
 </html>
