@@ -58,7 +58,7 @@ var myFunc = eval('(' + compressedFunc + ')');
     <h3>Storing and Retrieving Objects</h3>
     <h4>Example</h4>
     
-    
+     <p id="demo2"></p>
     <script>
     
     var testObject = { 'one': 1, 'two': 2, 'three': 3 };
@@ -68,8 +68,9 @@ localStorage.setItem('testObject', JSON.stringify(testObject));
 
 // Retrieve the object from storage
 var retrievedObject = localStorage.getItem('testObject');
-
-console.log('retrievedObject: ', JSON.parse(retrievedObject));
+var object = JSON.parse(retrievedObject);
+document.getElementById("demo2").innerHTML = object;
+//console.log('retrievedObject: ', JSON.parse(retrievedObject));
     </script>
     
   </body>
