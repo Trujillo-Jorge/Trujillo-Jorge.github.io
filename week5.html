@@ -30,11 +30,12 @@ var retrievedData = localStorage.getItem("quentinTarantino");
 var movies2 = JSON.parse(retrievedData);
  
 //making sure it still is an array
-//alert(movies2.length);
+
  document.getElementById("demo1").innerHTML = movies2.length;
     </script>
   <h3>Storing and Retrieving Functions</h3>
     <h4>Example</h4>
+    <p id="demo"></p>
     <script>
   var myFunc = function (){
   alert('Hello world!');
@@ -49,8 +50,8 @@ localStorage.setItem('compressedFunc', myFunc.toString());
 var myFunc = eval('(' + compressedFunc + ')');
 
 // Use it
-myFunc();   
-      
+//myFunc();   
+ document.getElementById("demo").innerHTML = myFunc();     
       
       
     </script>
