@@ -39,7 +39,18 @@ alert(movies2.length);
 };
 
 // Store it as a String
-localStorage.setItem('compressedFunc', myFunc.toString());  
+localStorage.setItem('compressedFunc', myFunc.toString());
+   //Retrieve the Function   
+   var compressedFunc = localStorage.getItem('compressedFunc');
+
+// Convert the String back to a function
+var myFunc = eval('(' + compressedFunc + ')');
+
+// Use it
+myFunc();   
+      
+      
+      
     </script>
     
   </body>
