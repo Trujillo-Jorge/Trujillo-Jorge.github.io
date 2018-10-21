@@ -69,7 +69,7 @@ localStorage.setItem('testObject', JSON.stringify(testObject));
 // Retrieve the object from storage
 var retrievedObject = localStorage.getItem('testObject');
 var object = JSON.parse(retrievedObject);
-document.getElementById("demo2").innerHTML = object;
+document.getElementById("demo2").innerHTML = object.length;
 //console.log('retrievedObject: ', JSON.parse(retrievedObject));
     </script>
     
