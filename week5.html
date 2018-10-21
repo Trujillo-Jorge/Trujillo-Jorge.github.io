@@ -14,7 +14,8 @@
    <li><a>sessionStorage maintains a separate storage area for each given origin that's available for the duration of the page session (as long as the browser is open, including page reloads and restores)</a></li>
    <li><a>localStorage does the same thing, but persists even when the browser is closed and reopened.</a></li>
   </ul>
-   <h3>Json Parse</h3>
+   <h3>Storing and Retrieving Arrays</h3>
+    <h4>Example</h4>
     <script>
     // our array
 var movies = ["Reservoir Dogs", "Pulp Fiction", "Jackie Brown", 
@@ -30,14 +31,10 @@ var movies2 = JSON.parse(retrievedData);
 //making sure it still is an array
 alert(movies2.length);
     </script>
-   <ul>
-     <li><a>When receiving data from a web server, the data is always a string.</a></li>
+    
+    
+    
+    
+  </body>
+</html>
 
-     <li><a>Parse the data with JSON.parse(), and the data becomes a JavaScript object.</a></li>
-  </ul>
-  <h3>Json Stringify</h3>
-   <ul>
-     <li><a>When sending data to a web server, the data has to be a string.</a></li>
-
-     <li><a>Convert a JavaScript object into a string with JSON.stringify().</a></li>
-  </ul>
