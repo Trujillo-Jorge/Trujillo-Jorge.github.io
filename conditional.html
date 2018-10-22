@@ -11,33 +11,102 @@
 <p> 
     <h2>Week 2 JavaScript</h2>
     <h3>Conditional statements</h3>
-      <a>Java, like all other programming languages, is equipped with specific statements that allow us to check a
-condition and execute certain parts of code depending on whether the condition is true or false. Such statements
-are called conditional, and are a form of composite statement.
-In Java, there are two forms of conditional statements: </a>
+      <a>Very often when you write code, you want to perform different actions for different decisions.
+
+You can use conditional statements in your code to do this.
+In JavaScript we have the following conditional statements:</a>
     <ul>
-      <li><a>The if-else Statement, to choose between two alternatives;</a></li>
-      <li><a>The switch Statement, to choose between multiple alternatives.</a></li>
+      <li><a>Use if to specify a block of code to be executed, if a specified condition is true</a></li>
+      <li><a>Use else to specify a block of code to be executed, if the same condition is false</a></li>
+      <li><a>Use else if to specify a new condition to test, if the first condition is false</a></li>
+      <li><a>Use switch to specify many alternative blocks of code to be executed</a></li>
     </ul>
     </p>
+  <h3>The if Statement</h3>
+  <h4>Example</h4>
+  <p id="ifstatement">Good Evening!</p>
+
+<script>
+if (new Date().getHours() < 18) {
+    document.getElementById("ifstatement").innerHTML = "Good day!";
+}
+</script>
   
+  <h3>The else Statement</h3>
+  <h4>Example</h4>
+  
+  <p>Click the button to display the current time:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="elsestatement"></p>
+
+<script>
+function myFunction() {
+    var hour = new Date().getHours(); 
+    var greeting;
+    if (hour < 18) {
+        greeting = "Good day";
+    } else {
+        greeting = "Good evening";
+    }
+    document.getElementById("elsestatement").innerHTML = greeting;
+}
+</script>
   <h3>The if-else Statement</h3>
   <h4>Example</h4>
-  <p id="ifelse"></p>
-  <script>
-  var month=12;
-  var year=3;
+  
+  <p>Click the button to get a time-based greeting:</p>
 
-if (month == 12) {
-nextMonth = 1;
-nextYear = year + 1;
-} 
-else {
-nextMonth = month + 1;
-nextYear = year;
+<button onclick="myFunction()">Try it</button>
+
+<p id="ifelse"></p>
+
+<script>
+function myFunction() {
+    var greeting;
+    var time = new Date().getHours();
+    if (time < 10) {
+        greeting = "Good morning";
+    } else if (time < 20) {
+        greeting = "Good day";
+    } else {
+        greeting = "Good evening";
+    }
+    document.getElementById("ifelse").innerHTML = greeting;
 }
-document.getElementById('ifelse').innerHTML = nextMonth + nextYear;
-  </script>
+</script>
+  <h3>The switch Statement</h3>
+  <h4>Example</h4>
+  
+  <p id="switch"></p>
+
+<script>
+var day;
+switch (new Date().getDay()) {
+    case 0:
+        day = "Sunday";
+        break;
+    case 1:
+        day = "Monday";
+        break;
+    case 2:
+        day = "Tuesday";
+        break;
+    case 3:
+        day = "Wednesday";
+        break;
+    case 4:
+        day = "Thursday";
+        break;
+    case 5:
+        day = "Friday";
+        break;
+    case  6:
+        day = "Saturday";
+}
+document.getElementById("switch").innerHTML = "Today is " + day;
+</script>
   </body>
 </html>
 
