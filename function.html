@@ -29,3 +29,45 @@ document.getElementById("function").innerHTML = theFunction(6, 5);
 <a>You can reuse code: Define the code once, and use it many times.
 
   You can use the same code many times with different arguments, to produce different results.</a>
+  <h4>Example</h4>
+<script type="text/JavaScript">
+function FinalD() {
+	
+	var name = document.getElementById('namein').value;
+	var credit = parseFloat(document.getElementById("ain").value);
+
+	
+	var dgree;
+	if ( 0 <= credit && credit < 30 ) {
+		
+			degree = "freshman";
+	
+	}
+	else if (30 <= credit && credit < 60) {
+		
+			degree = "sophomore";
+	}
+	else if (60 <= credit && credit < 90){
+		
+			degree = "junior";
+			}
+	else if (credit >= 90){
+		
+			degree = "senior";
+			}
+	else {
+		    degree = "try again";
+			 }
+
+	
+	document.getElementById('dgree1').innerHTML = name + "    your year in school is   " + degree;
+}
+</script>
+
+<h1>What is your year in school?</h1>
+<p>Please enter your name <input type="text" id="namein"/></p>
+<p>How many credits have you approved?<input type="text" id="ain"/></p>
+<p><button type="button" onclick="FinalD()">check</button>
+<div id= "dgree1"></div>
+  </body>
+</html>
