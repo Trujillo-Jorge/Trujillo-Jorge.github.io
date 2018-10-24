@@ -32,7 +32,19 @@ var y = 8000;
 var sum = x + y;
 document.getElementById("var").innerHTML = carName + "   " + sum;
 </script>
-
+    <h3>Parameters</h3>
+    <a>Parameters are used when defining a function, they are the names created in the function definition.</a>,<br>
+    <a>In fact, during a function definition, we can pass in up to 255 parameters! Parameters are separated by commas in the ().</a><br>
+    <a>Here’s an example with two parameters — param1 & param2:</a>
+    <h4>Example</h4>
+    <p id= "para"></p>
+    <script>
+    const param1 = true;
+const param2 = false;
+function twoParams(param1, param2){
+document.getElementById("para").innerHTML = twoParams();
+}
+    </script>
     
   </body>
 </html>
