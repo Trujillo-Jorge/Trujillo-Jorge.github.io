@@ -17,10 +17,22 @@
 <ul>
   <li><a>Names can contain letters, digits, underscores, and dollar signs.</a></li>
   <li><a>Names must begin with a letter</a></li>
-  <li><a>Names can also begin with $ and _ (but we will not use it in this tutorial)</a></li>
+  <li><a>Names can also begin with $ and _ </a></li>
   <li><a>Names are case sensitive (y and Y are different variables)</a></li>
   <li><a>Reserved words (like JavaScript keywords) cannot be used as names</a></li>
+</ul>
+    <h4>Example</h4>
     
+    <p id="var"></p>
+
+<script>
+var carName = "Volvo";
+var x = 6.000;
+var y = 8.000;
+var sum = x + y;
+document.getElementById("var").innerHTML = carName + "   " + sum;
+</script>
+
     
   </body>
 </html>
