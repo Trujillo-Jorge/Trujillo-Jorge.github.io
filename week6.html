@@ -65,17 +65,17 @@ element.appendChild(para);
     <h3>insertBefore()</h3>
     <a> We go to use the same example to see the difference when we use insertBefore()
       <h4>Example</h4>
- <div id="insert">
+ <div id="before">
 <p id="p1">Hello World.</p>
 <p id="p2">Bye Bye.</p>
 </div>
 
 <script>
 var para = document.createElement("p");
-var node = document.createTextNode("Regards.");
+var node = document.createTextNode("Regards");
 para.appendChild(node);
 
-var element = document.getElementById("insert");
+var element = document.getElementById("before");
 var child = document.getElementById("p1");
 element.insertBefore(para,child);
 </script>
