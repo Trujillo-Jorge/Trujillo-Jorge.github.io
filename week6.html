@@ -45,9 +45,21 @@
   <li><a>The methods to access all HTML elements</a></li>
   <li><a>The events for all HTML elements</a></li>
 <a>In other words: The HTML DOM is a standard for how to get, change, add, or delete HTML elements.</a>
+  <h3>Creating New Elements</h3>
+<a>To add a new element to the HTML DOM, you must create the element (element node) first, and then append it to an existing element.</a>
+  <h4>Example</h4>
+  <div id="create">
+<p id="p1">Hello World</p>
+<p id="p2">Bye Bye</p>
+</div>
 
-
-
+<script>
+var para = document.createElement("p");
+var node = document.createTextNode("Regards.");
+para.appendChild(node);
+var element = document.getElementById("create");
+element.appendChild(para);
+</script>
  
  
  
