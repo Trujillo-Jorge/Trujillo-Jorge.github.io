@@ -79,6 +79,20 @@ var element = document.getElementById("insert");
 var child = document.getElementById("p1");
 element.insertBefore(para,child);
 </script>
+      <h3>Removing Elements</h3>
+      <a>To remove an HTML element, you must know the parent of the element:</a>
+      <h4>Example</h4>
+      <div id="remove">
+<p id="p1">Hello World.</p>
+<p id="p2">Bye Bye.</p>
+</div>
+
+<script>
+var parent = document.getElementById("remove");
+var child = document.getElementById("p1");
+parent.removeChild(child);
+</script>
+      
  
  </body>
  </html>
