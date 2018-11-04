@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+.mystyle {
+    width: 300px;
+    height: 50px;
+    background-color: coral;
+    color: white;
+    font-size: 25px;
+}
+
+.newClassName {
+    width: 400px;
+    height: 100px;
+    background-color: lightblue;
+    text-align: center;
+    font-size: 25px;
+    color: navy;
+    margin-bottom: 10px;
+}
+</style>
     <meta charset="utf-8">
     <link href= "styles/styleweek4.css" rel="stylesheet">
     <title>Week6</title>
@@ -29,6 +48,27 @@
 function myFunction() {
     document.getElementById("myH1").style.color = "blue";
     document.getElementById("proof").style.color = "red";
+}
+</script>
+    <h3>classList Property</h3>
+    <p>This property is useful to add, remove and toggle CSS classes on an element.</p>
+    <p>The classList property is read-only, however, you can modify it by using the add() and remove() methods.</p>
+    <p>Cross-browser solution: The classList property is not supported in IE9 and earlier. 
+       However, you can use the className property or regular expressions for a cross-browser solution.</p>
+    <h4>Example</h4>
+<p>Click the button to toggle between two classes.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p><strong>Note:</strong> The classList property is not supported in Internet Explorer 9 and earlier versions.</p>
+
+<div id="myDIV" class="mystyle">
+Have a Great Day
+</div>
+
+<script>
+function myFunction() {
+    document.getElementById("myDIV").classList.toggle("newClassName");
 }
 </script>
   </body>
