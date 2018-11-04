@@ -4,6 +4,18 @@
     <meta charset="utf-8">
     <link href= "styles/styleweek4.css" rel="stylesheet">
     <title>Week6</title>
+    <style id="style1" type="text/css">
+      .wow{color: black;}
+    </style>
+    <script type="text/javascript">
+      function ChangeCSSRule(xElement,xValue) {
+        var strCSS = 'cssRules';
+if(document.all) {
+           strCSS = 'rules';
+        }
+        document.styleSheets[0][strCSS][0].style[xElement] = xValue;
+      }
+    </script>
     </head>
 
   <body>
@@ -17,5 +29,12 @@
    <p>The solution we will need to employ for all of them is one that involves JavaScript. JavaScript not only lets us style the 
       element we are interacting with, more importantly, it allows us to style elements all over the page. This freedom is very
       powerful and goes well beyond CSS's limited ability to style content inside (or very close to) itself.</p>
+    <h4>Example</h4>
+    <p class="wow">This is a test! Change the color name in the textbox!</p>
+    <form name="Form1">
+      <input type="text" name="T1" value="" onchange="ChangeCSSRule('color',this.value)">
+    </form>
   </body>
   </html>
+
+  
