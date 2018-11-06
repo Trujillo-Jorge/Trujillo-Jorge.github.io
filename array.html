@@ -29,5 +29,31 @@ JavaScript does not support arrays with named indexes.In JavaScript, arrays alwa
   <li><a>JavaScript does not support associative arrays.</a></li>
   <li><a>You should use objects when you want the element names to be strings (text).</a></li>
   <li><a>You should use arrays when you want the element names to be numbers.</a></li>
+  <h4>Example</h4>
+  <h5>Array with numbered indexes.</h5>
+
+<p id="arrays"></p>
+
+<script>
+var person = [];
+person[0] = "Daniel";
+person[1] = "Trujillo";
+person[2] = 41; 
+document.getElementById("arrays").innerHTML =
+person[0] + " " + person.length;
+</script>
+  
+  <p>If you use a named index when accessing an array, JavaScript will redefine the array to a standard object, and some array methods and properties will produce undefined or incorrect results.</p>
+
+<p id="newArray"></p>
+
+<script>
+var person = [];
+person["firstName"] = "John";
+person["lastName"] = "Doe";
+person["age"] = 46; 
+document.getElementById("newArray").innerHTML =
+person[0] + " " + person.length;
+</script>
   </body>
 </html>
