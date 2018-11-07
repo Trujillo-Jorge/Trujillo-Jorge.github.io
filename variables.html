@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <link href= "styles/styleweek3.css" rel="stylesheet">
-    <title>Week2</title>
+    <title>Week3</title>
     </head>
 
   <body>
     <h1>Topics to Reach</h1>
 <p> 
-    <h2>Week 2 JavaScript</h2>
+    <h2>Week 3 JavaScript</h2>
     <h3>Variables</h3>
     <a>JavaScript variables are containers for storing data values. You declare a JavaScript variable with the var keyword.</a><br>
     <a>All JavaScript variables must be identified with unique names. These unique names are called identifiers. Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).</a><br>
@@ -37,15 +37,16 @@ document.getElementById("var").innerHTML = carName + "   " + sum;
     <a>In fact, during a function definition, we can pass in up to 255 parameters! Parameters are separated by commas in the ().</a><br>
     <a>Here’s an example with two parameters — param1 & param2:</a>
     <h4>Example</h4>
-    <p id= "para"></p>
-    <script>
-    var param1 = true;
-var param2 = false;
-function twoParams(param1, param2){
-//document.getElementById("para").innerHTML = twoParams();
- // alert("twoParams");
-  twoParams(param1);
+    <p id="param"></p>
+
+<script>
+function myFunction(x, y) {
+    if (y === undefined) {
+        y = 2;
+    }    
+    return x * y;
 }
+document.getElementById("param").innerHTML = myFunction(4);
     </script>
   <p>Next Page: <a href="array.html" target="_blank">Pass to the Next Topic</a></p>  
   </body>
